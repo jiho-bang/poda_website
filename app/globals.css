@@ -132,53 +132,6 @@ p {
   color: var(--baseDark);
 }
 
-/* TIMELINE FAR AWAY
-
-.timeline {
-  position: relative;
-  padding-left: 40px;
-  list-style: none;
-}
-.timeline-item {
-  position: relative;
-  margin-bottom: 20px;
-  padding-left: 10px;
-}
-.timeline::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 15px; 
-  width: 1px;
-  background-color: #ccc;
-}
-.timeline-item::before {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: -32px; 
-  width: 15px;
-  height: 15px;
-  background-color: #ccc;
-  border-radius: 50%;
-}
-.timeline-date {
-  font-size: 14px;
-  color: #888;
-  margin-bottom: 4px;
-  display: block;
-}
-.timeline-title {
-  font-weight: 600;
-  font-size: 16px;
-  color: var(--baseDark);
-}
-.timeline-place {
-  font-size: 15px;
-  color: #666;
-} */
-
 .timeline {
   position: relative;
   padding-left: 20px;
@@ -222,6 +175,59 @@ p {
 .timeline-place {
   font-size: 15px;
   color: #666;
+}
+
+@media (max-width: 768px) {
+  .site-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .logo-holder {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: relative; 
+  }
+
+  .logo-holder .logo {
+    height: 80px;
+    width: 80px;
+    margin-right: 0;
+  }
+
+  .logo-holder .logo-text {
+    font-size: 24px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  nav ul li::before {
+    content: "-" 
+  }
+  nav ul li:first-child::before {
+    content: "-";
+  }
+
+  .dark-button {
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+    margin-left: 0;
+  }
+  
+  h1 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 16px;
+  }
 }
 
 /* Research */

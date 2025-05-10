@@ -30,7 +30,7 @@ export default function Header() {
   return (
     <header>
       <div className="logo-holder">
-        <img src="/logo.jpg" alt="Logo" className="logo" />
+        <img src="imgs/logo.jpg" alt="Logo" className="logo" />
         <div className="text-and-menu">
           <Link href="/" className="logo-text">
             Sebastian Wehlburg

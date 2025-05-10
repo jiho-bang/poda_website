@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Poda",
   description: "Sebastian Wehlburg Portfolio",
   icons: {
-    icon: "/favicon.png",
+    icon: "/imgs/favicon.png",
   },
 };
 
