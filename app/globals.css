@@ -343,3 +343,12 @@ p {
   max-width: 600px;
   margin-bottom: 7px;
 }
+
+@media (max-width: 768px) {
+  .research-text {
+    order: 1;
+  }
+  .research-image {
+    order: 2;
+  }
+}
