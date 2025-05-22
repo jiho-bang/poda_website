@@ -135,7 +135,7 @@ nav ul li:first-child::before {
     background-color: var(--baseLight);
     padding: 20px 0;
     position: absolute;
-    top: 100%;
+    top: 0;
     left: 0;
     z-index: 1000;
     gap: 12px;
