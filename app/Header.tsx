@@ -48,12 +48,11 @@ export default function Header() {
           {isDark ? <FiSun size={32} /> : <FiMoon size={32} />}
         </button>
         <button className="mobile-toggle" onClick={toggleMenu} aria-label="Toggle navigation menu">
-          <svg className="w-6 h-6" style={{ color: 'var(--baseDark)' }} width="64" height="64" fill="none" viewBox="0 0 24 24">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" style={{ color: 'var(--baseDark)' }}>
             <path stroke="currentColor" strokeLinecap="round" strokeWidth="2" d="M5 7h14M5 12h14M5 17h14" />
           </svg>
         </button>
       </div>
-
       <div className="logo-holder">
         <img src="imgs/logo.jpg" alt="Logo" className="logo" />
         <div className="text-and-menu">

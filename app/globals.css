@@ -98,7 +98,7 @@ nav ul li:first-child::before {
 .nav-buttons {
   position: absolute;
   top: 80px;
-  right: 200px;
+  right: 100px;
   display: flex;
   gap: 12px;
   color: var(--baseDark);
@@ -120,6 +120,9 @@ nav ul li:first-child::before {
 }
 
 @media (max-width: 768px) {
+  main {
+    padding: 5px 5px;
+  }
   nav {
     width: 100%;
     justify-content: flex-end;
@@ -164,6 +167,9 @@ nav ul li:first-child::before {
     border: none;
     cursor: pointer;
     padding: 10px;
+  }
+  .nav-buttons button:hover {
+    border: none;
   }
 }
 
@@ -233,6 +239,9 @@ p {
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding-bottom: 30px;
+  }
   .site-wrapper {
     max-width: 1280px;
     margin: 0 auto;
