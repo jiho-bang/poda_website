@@ -3,7 +3,6 @@
 :root {
   --white: white;
   --black: black;
-  --baseBackground: #f4f4f4;
   --baseLight: #f4f4f4;
   --baseDark: #1e1e1e;
   --navColor: #f64949;
@@ -96,11 +95,16 @@ nav ul li:first-child::before {
   content: "";
 }
 
-.dark-button {
+.nav-buttons {
+  position: absolute;
+  top: 80px;
+  right: 200px;
+  display: flex;
+  gap: 12px;
   color: var(--baseDark);
-  margin-left: auto;
+  z-index: 1000;
 }
-.dark-button button {
+.nav-buttons button {
   background: none;
   border: none;
   cursor: pointer;
@@ -108,8 +112,59 @@ nav ul li:first-child::before {
   transition: all 0.2s ease;
   border-radius: 6px;
 }
-.dark-button button:hover {
+.nav-buttons button:hover {
   border: 2px solid var(--baseDark);
+}
+.nav-buttons .mobile-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  nav {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    background-color: var(--baseLight);
+    padding: 20px 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    gap: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  nav ul.active {
+    display: flex;
+  }
+  nav ul li a {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px 0;
+  }
+  nav ul li::before {
+    display: none;
+  }
+  nav ul li:first-child::before {
+    display: none;
+  }
+
+  .nav-buttons {
+    top: 10px;
+    right: 10px;
+    gap: 8px;
+  }
+  .nav-buttons .mobile-toggle {
+    display: inline-block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
 }
 
 /* Home */
@@ -214,7 +269,7 @@ p {
     content: "-";
   }
 
-  .dark-button {
+  .nav-button {
     position: absolute;
     top: 10px; 
     right: 10px; 
@@ -231,3 +286,4 @@ p {
 }
 
 /* Research */
+
