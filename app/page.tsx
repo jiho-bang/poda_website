@@ -1,6 +1,7 @@
 "use client";
 
 import { icons } from "../app/icons";
+import { researchPapers } from "./researchData";
 
 export default function Home() {
 
@@ -59,6 +60,32 @@ export default function Home() {
           <h1>
             Research
           </h1>
+          <p>
+            My research focuses on random matrices, free probability and statistical learning theory. 
+            For a list of all publications, see the publication list, the arXiv, or my Google Scholar profile. 
+            Below are some recent or selected publications.
+          </p>
+
+          {researchPapers.map((paper, index) => (
+            <div key={index} className="research-entry">
+              <div className={`research-content ${index % 2 === 1 ? "reverse" : ""}`}>
+                {paper.image && (
+                  <img src={paper.image} alt={paper.title} className="research-image" />
+                )}
+                <div className="research-text">
+                  <h2 className="research-title">{paper.title}</h2>
+                  <p className="research-author">{paper.authors}</p>
+                  <p className="research-type">{paper.type}</p>
+                  <div className="research-description">{paper.description}</div>
+                  <div className="research-tag">
+                    {paper.tags.map((tag, i) => (
+                    <span key={i} className="research-tag">#{tag}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
         </section>
       </main>
     </>

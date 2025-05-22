@@ -295,4 +295,51 @@ p {
 }
 
 /* Research */
-
+.research-entry {
+  margin-bottom: 40px;
+}
+.research-entry p {
+  padding-bottom: 0px;
+}
+.research-content {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.research-content.reverse {
+  flex-direction: row-reverse;
+}
+.research-image {
+  width: 400px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+.research-text {
+  flex: 1;
+  min-width: 280px;
+  padding-top: 30px;
+}
+.research-title {
+  font-size: 18px;
+  color: var(--navColor);
+  font-weight: bold;
+}
+.research-author {
+  font-style: italic;
+  font-size: 14px;
+}
+.research-type {
+  font-size: 14px;
+  font-weight: bold;
+}
+.research-description {
+  background-color: var(--baseLight);
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin-bottom: 7px;
+}
